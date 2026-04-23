@@ -1,6 +1,6 @@
 import FadeIn from "@/components/FadeIn";
 import GlassCard from "@/components/GlassCard";
-import HeroScene from "@/components/HeroScene";
+import ReactiveConstellation from "@/components/ReactiveConstellation";
 import TechBackground from "@/components/TechBackground";
 import { projects, stackGroups } from "@/data/portfolio";
 
@@ -117,7 +117,7 @@ export default function Home() {
                     </span>
                   </div>
 
-                  <HeroScene />
+                  <ReactiveConstellation />
 
                   <div className="grid grid-cols-3 gap-3 px-3 pb-3">
                     <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-4">

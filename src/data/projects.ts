@@ -1,65 +1,102 @@
 export const projects = [
   {
-    slug: "resume-optimizer-ai",
-    title: "ResumeOptimizer AI",
-    subtitle: "Otimização inteligente de currículos com IA",
+    slug: "findjobapp",
+    title: "FindJobApp",
+    subtitle: "Descoberta determinística de vagas com matching transparente",
     objective:
-      "Criar uma ferramenta capaz de ajudar candidatos a adaptar currículos de forma mais estratégica para diferentes vagas.",
+      "Criar uma plataforma que resolva o problema de busca de emprego de forma transparente, usando matching determinístico e IA controlada apenas para auxiliar na personalização de currículos.",
     problem:
-      "Muitos candidatos enviam o mesmo currículo para várias vagas, sem ajustar linguagem, prioridades e aderência ao perfil buscado.",
+      "Buscas de emprego são fragmentadas, barulhentas e tendenciosas para as mesmas plataformas visíveis. Candidatos enviam currículos genéricos sem ajuste estratégico para cada vaga.",
     solution:
-      "Desenvolvi uma experiência orientada por IA para analisar contexto, reorganizar informações e sugerir melhorias com foco em clareza, impacto e aderência.",
+      "Desenvolvi um sistema Laravel + Vue/Inertia com descoberta determinística de vagas, matching baseado em palavras-chave extraídas do currículo, e geração controlada de variantes de currículo via Gemini API apenas quando o usuário solicita explicitamente.",
     impact:
-      "O projeto demonstra integração com LLMs, experiência de usuário, produto e aplicação prática de IA em um problema real.",
-    stack: ["Next.js", "TypeScript", "OpenAI", "UX", "Produto"],
-    github: "https://github.com/caiobaraujo",
+      "O projeto demonstra domain modeling centrado em JobLead, pipelines determinísticos inspecionáveis, e uso ético de IA com fronteiras claras - sem AI ranking ou matching opaco.",
+    stack: ["Laravel", "Vue.js", "Inertia.js", "MySQL", "Gemini API", "Pest"],
+    github: "https://github.com/caiobaraujo/FindJobApp",
     details: [
-      "Estruturei a aplicação pensando em uma jornada simples: entrada do currículo, contexto da vaga e geração de uma versão melhorada.",
-      "A principal decisão foi tratar IA como recurso de produto, não apenas como chamada de API.",
-      "O foco foi transformar uma dor comum em uma experiência prática, clara e fácil de usar.",
+      "Estruturei o modelo de domínio com JobLead como entidade central, separando discovery, matching e geração de currículo em camadas distintas.",
+      "A descoberta de vagas é puramente determinística - cada fonte tem parser específico, sem crawling genérico ou enriquecimento por IA.",
+      "O workspace do usuário mostra leads organizados por utilidade, priorizando vagas com maior overlap de habilidades primeiro.",
+      "ResumeVariant é gerado apenas sob demanda do usuário, em três modos: faithful (original), ats_boost (otimizado) e ats_safe (conservador).",
+      "PDF export renderiza variantes já armazenadas, sem chamadas adicionais à API - garantindo rastreabilidade e previsibilidade.",
     ],
-    video: "/videos/blog.mkv",
+    video: "/videos/findjobapp-demo.mp4", // Você substitui depois
   },
   {
     slug: "venda-odonto",
     title: "VendaOdonto",
-    subtitle: "Automação de prospecção e geração de materiais personalizados",
+    subtitle: "Pipeline de hiper-personalização para prospecção B2B",
     objective:
-      "Aumentar eficiência em processos comerciais por meio de automação e personalização de ativos.",
+      "Aumentar taxas de conversão em prospecção fria no setor de saúde através de hiper-personalização dinâmica e automação de UI.",
     problem:
-      "Processos manuais de prospecção tendem a ser lentos, repetitivos e inconsistentes quando dependem de produção individual.",
+      "Abordagens genéricas são ignoradas ou bloqueadas. Donos de clínicas recebem dezenas de mensagens automáticas diariamente e desenvolveram 'filtro' para textos longos e padronizados.",
     solution:
-      "Desenvolvi um fluxo mais previsível para geração de materiais personalizados, reduzindo esforço manual e aumentando consistência.",
+      "Construí um pipeline Python que extrai leads do Google Maps, gera landing pages dinâmicas via URL Params (injetando nome da empresa e bairro), automatiza screenshots mobile com Selenium para prova visual, e gerencia funil via CRM em CSV.",
     impact:
-      "O projeto reforça domínio de automação, integração, backend e construção de soluções orientadas a eficiência operacional.",
-    stack: ["Python", "Automação", "Integrações", "Frontend", "Fluxos"],
-    github: "https://github.com/caiobaraujo",
+      "O sistema quebra o padrão de spam com imagens personalizadas por lead, usa ancoragem de preço (R$ 26,90 vs alto valor de retenção), e está arquitetado para VPS ou integração com n8n.",
+    stack: ["Python", "Selenium", "Pandas", "Tailwind CSS", "CSV"],
+    github: "https://github.com/caiobaraujo/VendaOdonto",
     details: [
-      "Modelei o projeto pensando em etapas de entrada, processamento e saída de materiais.",
-      "A arquitetura priorizou clareza de fluxo e separação entre lógica de negócio e apresentação.",
-      "Esse case mostra capacidade de transformar tarefas repetitivas em sistemas mais escaláveis.",
+      "Desenvolvi o orquestrador automacao_total.py que gerencia o ciclo completo: URL params → screenshot → update do CRM.",
+      "A landing page usa JavaScript para ler parâmetros da URL e injetar dinamicamente nome da empresa e bairro no DOM, criando experiência única por lead.",
+      "O lead_scraper.py coleta dados brutos de clínicas em bairros estratégicos de BH (Lourdes, Savassi, Santo Agostinho) via geolocalização.",
+      "crm_vendas.py mantém persistência em CSV com status do funil (Pendente, Enviado, Interessado) para rastreabilidade.",
+      "Utilizei Selenium em modo headless para simular iPhone 12, garantindo screenshots realistas e escaláveis.",
     ],
-    video: "/videos/teste01.mkv",
+    video: "/videos/venda-odonto-demo.mp4", // Você substitui depois
   },
   {
-    slug: "physiotherapy-site",
-    title: "Physiotherapy Site",
-    subtitle: "Landing page moderna com foco em conversão",
+    slug: "smart-blog",
+    title: "Smart Blog",
+    subtitle:
+      "Blog engine com workflow assistido por IA para criar posts técnicos",
     objective:
-      "Criar uma presença digital profissional para apresentar serviço, autoridade e gerar confiança no usuário.",
+      "Criar um blog pessoal que agilizasse a transformação de anotações de estudo em posts técnicos estruturados, mantendo controle editorial humano.",
     problem:
-      "Muitos negócios locais possuem sites pouco claros, visualmente fracos e sem foco em conversão.",
+      "Profissionais de tecnologia acumulam anotações de estudo em formatos desconectados, mas o processo de transformá-las em conteúdo público é lento e trabalhoso.",
     solution:
-      "Desenvolvi uma interface enxuta, com hierarquia visual forte, boa navegação e foco em comunicação direta.",
+      "Desenvolvi um blog Next.js que integra Google Gemini para refinar notas de estudo em posts bem estruturados, mantendo o desenvolvedor no controle do que é publicado.",
     impact:
-      "O projeto evidencia atenção a frontend, design, performance, responsividade e experiência do usuário.",
-    stack: ["Frontend", "UI", "Performance", "Landing Page", "Conversão"],
-    github: "https://github.com/caiobaraujo",
+      "O projeto demonstra integração ética de IA em workflow de conteúdo, mantendo qualidade editorial enquanto reduz tempo de produção de rascunho para publicação.",
+    stack: ["Next.js", "TypeScript", "MDX", "Google Gemini AI", "Tailwind CSS"],
+    github: "https://github.com/caiobaraujo/smart-blog",
     details: [
-      "A construção priorizou leitura rápida, estética limpa e seções objetivas.",
-      "O foco visual foi gerar percepção de profissionalismo sem poluir a interface.",
-      "Esse projeto mostra sensibilidade para produto, design e experiência do usuário.",
+      "A arquitetura separa conteúdo em MDX (armazenado em content/posts/) do sistema de geração assistida por IA.",
+      "Implementei um gerador que recebe notas brutas e sugere estrutura, título, resumo e seções organizadas.",
+      "O desenvolvedor revisa e edita o post gerado antes de commit - garantindo voz autoral e precisão técnica.",
+      "Usei rotas dinâmicas do Next.js App Router para renderizar posts com base no slug do arquivo MDX.",
+      "O blog mantém performance estática com geração em build time (SSG), ideal para Vercel.",
     ],
-    video: "/videos/physiotherapy-site.mp4",
+    video: "/videos/smart-blog-demo.mp4", // Você substitui depois
+  },
+  {
+    slug: "streetsmart-bh",
+    title: "StreetSmart BH",
+    subtitle: "Recomendação híbrida com ML e NLP para empreendedores locais",
+    objective:
+      "Aumentar a assertividade de vendas de empreendedores de rua em Belo Horizonte usando predição de produtos com maior probabilidade de lucro baseada em contexto.",
+    problem:
+      "Empreendedores locais perdem oportunidades de venda por não conseguir antecipar quais produtos terão maior demanda baseado em condições climáticas e eventos da cidade.",
+    solution:
+      "Construí um sistema Python com Streamlit que usa XGBoost para prever demanda e NLP para classificar eventos da PBH/Sympla, cruzando com dados em tempo real da OpenWeather API para recomendar produtos contextualizados.",
+    impact:
+      "O projeto prova viabilidade de recommendation engine acessível para pequenos negócios, combinando dados públicos (clima + eventos) com ML prático sem exigir infraestrutura cara.",
+    stack: [
+      "Python",
+      "XGBoost",
+      "NLP",
+      "Streamlit",
+      "OpenWeather API",
+      "Pandas",
+    ],
+    github: "https://github.com/caiobaraujo/StreetSmart-BH",
+    details: [
+      "Modelo de ML treinado com dados históricos de vendas + variáveis externas (temperatura, chuva, tipo de evento).",
+      "Pipeline de NLP processa descrições de eventos para categorizar automaticamente (show, feira, feriado, etc.).",
+      "Recomendação híbrida combina predição do XGBoost com regras de negócio (ex: guarda-chuva se chuva > 50%).",
+      "Interface em Streamlit permite ao empreendedor inserir local e horário para receber top-3 produtos sugeridos.",
+      "Arquitetura clean com separação clara entre engines de predição, serviços externos e camada de apresentação.",
+    ],
+    video: "/videos/streetsmart-demo.mp4", // Você substitui depois
   },
 ];

@@ -20,7 +20,7 @@ export const projects = [
       "ResumeVariant é gerado apenas sob demanda do usuário, em três modos: faithful (original), ats_boost (otimizado) e ats_safe (conservador).",
       "PDF export renderiza variantes já armazenadas, sem chamadas adicionais à API - garantindo rastreabilidade e previsibilidade.",
     ],
-    video: "/videos/findjobapp-demo.mp4", // Você substitui depois
+    video: "/videos/findjobapp.mp4",
   },
   {
     slug: "venda-odonto",
@@ -43,7 +43,7 @@ export const projects = [
       "crm_vendas.py mantém persistência em CSV com status do funil (Pendente, Enviado, Interessado) para rastreabilidade.",
       "Utilizei Selenium em modo headless para simular iPhone 12, garantindo screenshots realistas e escaláveis.",
     ],
-    video: "/videos/venda-odonto-demo.mp4", // Você substitui depois
+    video: "/videos/venda_odonto.mp4",
   },
   {
     slug: "smart-blog",
@@ -67,7 +67,7 @@ export const projects = [
       "Usei rotas dinâmicas do Next.js App Router para renderizar posts com base no slug do arquivo MDX.",
       "O blog mantém performance estática com geração em build time (SSG), ideal para Vercel.",
     ],
-    video: "/videos/smart-blog-demo.mp4", // Você substitui depois
+    video: "/videos/blog_ai.mp4",
   },
   {
     slug: "streetsmart-bh",
@@ -97,6 +97,6 @@ export const projects = [
       "Interface em Streamlit permite ao empreendedor inserir local e horário para receber top-3 produtos sugeridos.",
       "Arquitetura clean com separação clara entre engines de predição, serviços externos e camada de apresentação.",
     ],
-    video: "/videos/streetsmart-demo.mp4", // Você substitui depois
+    video: "/videos/streetsmart_bh.mp4",
   },
 ];

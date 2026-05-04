@@ -11,8 +11,8 @@ export default function ProjectsSection() {
           Estudos de caso com foco em problema, solução e impacto.
         </h2>
         <p className="mt-4 text-white/65">
-          Cada projeto apresenta contexto, decisões técnicas e uma área preparada
-          para demonstração em vídeo.
+          Cada projeto apresenta contexto, decisões técnicas e uma área
+          preparada para demonstração em vídeo.
         </p>
       </div>
 
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
                       src={project.video}
                       controls
                       preload="metadata"
-                      className="h-full w-full object-cover"
+                      className="w-full h-full object-contain rounded-2xl bg-black"
                     />
                   ) : (
                     <div className="p-8 text-center">

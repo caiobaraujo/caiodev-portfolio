@@ -5,6 +5,7 @@ import { projects } from "@/data/projects";
 import Header from "@/components/Header";
 import StackSection from "@/components/StackSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
@@ -30,24 +31,6 @@ export default function Home() {
                 premium, backend robusto e soluções com sensação de tecnologia
                 avançada sem abrir mão de clareza, velocidade e impacto real.
               </p>
-
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href="#projetos"
-                  className="rounded-2xl bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
-                >
-                  Ver projetos
-                </a>
-
-                <a
-                  href="https://github.com/caiobaraujo"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-2xl border border-white/12 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-                >
-                  GitHub
-                </a>
-              </div>
             </div>
 
             <div className="flex justify-center lg:justify-end">
@@ -57,65 +40,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sobre" className="mx-auto max-w-6xl px-6 py-24">
-        <div className="max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.25em] text-cyan-300/80">
-            Sobre mim
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold md:text-5xl">
-            Engenharia com foco em experiência e produto.
-          </h2>
-          <p className="mt-6 text-base leading-8 text-white/68 md:text-lg">
-            Sou desenvolvedor full stack com experiência em backend, interfaces
-            modernas e integrações com IA. Gosto de construir soluções que não
-            apenas funcionem, mas transmitam qualidade, clareza e percepção de
-            valor para quem usa.
-          </p>
-        </div>
-      </section>
-
       <ProjectsSection />
 
       <StackSection />
 
       <ExperienceSection />
 
-      <section id="contato" className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-md shadow-[0_10px_50px_rgba(0,0,0,0.35)] md:p-10">
-          <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-cyan-300/80">
-                Contato
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold md:text-5xl">
-                Vamos construir algo relevante.
-              </h2>
-              <p className="mt-4 max-w-2xl text-white/65">
-                Estou aberto a oportunidades onde engenharia, produto,
-                performance e experiência do usuário precisem trabalhar juntos.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="mailto:calobrega@gmail.com"
-                className="rounded-2xl bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
-              >
-                Enviar e-mail
-              </a>
-
-              <a
-                href="https://github.com/caiobaraujo"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-2xl border border-white/12 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactSection />
     </main>
   );
 }

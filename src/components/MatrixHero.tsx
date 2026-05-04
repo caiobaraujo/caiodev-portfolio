@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 type Cell = {
   alpha: number;
@@ -208,12 +209,35 @@ export default function MatrixHero() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_55%,rgba(0,0,0,0.10)_82%,rgba(0,0,0,0.22)_100%)]" />
       </div>
 
-      <div className="mt-4">
+      <div className="mt-4 grid grid-cols-3 gap-3">
         <a
-          href="#sobre"
-          className="inline-flex rounded-2xl border border-white/12 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+          href="https://linkedin.com/in/caio-araujo-986801221"
+          target="_blank"
+          rel="noreferrer"
+          className="group flex items-center justify-center gap-2 rounded-2xl border border-blue-400/20 bg-blue-400/10 px-4 py-3 text-sm font-semibold text-blue-200 transition hover:-translate-y-0.5 hover:border-blue-300/40 hover:bg-blue-400/15"
         >
-          Sobre mim
+          <FaLinkedinIn className="text-base transition group-hover:scale-110" />
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/caiobaraujo"
+          target="_blank"
+          rel="noreferrer"
+          className="group flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10"
+        >
+          <FaGithub className="text-base transition group-hover:scale-110" />
+          GitHub
+        </a>
+
+        <a
+          href="https://wa.me/5532984482369"
+          target="_blank"
+          rel="noreferrer"
+          className="group flex items-center justify-center gap-2 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-sm font-semibold text-emerald-300 transition hover:-translate-y-0.5 hover:border-emerald-300/40 hover:bg-emerald-400/15"
+        >
+          <FaWhatsapp className="text-base transition group-hover:scale-110" />
+          WhatsApp
         </a>
       </div>
     </div>

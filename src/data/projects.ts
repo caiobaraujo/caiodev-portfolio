@@ -18,7 +18,7 @@ export const projects = [
       "A principal decisão foi tratar IA como recurso de produto, não apenas como chamada de API.",
       "O foco foi transformar uma dor comum em uma experiência prática, clara e fácil de usar.",
     ],
-    video: "/videos/resume-optimizer.mp4",
+    video: "/videos/blog.mkv",
   },
   {
     slug: "venda-odonto",
@@ -39,7 +39,7 @@ export const projects = [
       "A arquitetura priorizou clareza de fluxo e separação entre lógica de negócio e apresentação.",
       "Esse case mostra capacidade de transformar tarefas repetitivas em sistemas mais escaláveis.",
     ],
-    video: "/videos/venda-odonto.mp4",
+    video: "/videos/teste01.mkv",
   },
   {
     slug: "physiotherapy-site",

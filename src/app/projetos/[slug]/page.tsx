@@ -74,6 +74,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </span>
               ))}
             </div>
+            <div className="mt-12 overflow-hidden rounded-3xl border border-white/10 bg-black/25 p-4">
+              {project.video ? (
+                <video
+                  src={project.video}
+                  controls
+                  preload="metadata"
+                  className="aspect-video w-full rounded-2xl object-cover"
+                />
+              ) : (
+                <div className="flex aspect-video items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-center text-white/55">
+                  Vídeo demonstrativo do projeto em breve.
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="mt-16 grid gap-6 md:grid-cols-3">
